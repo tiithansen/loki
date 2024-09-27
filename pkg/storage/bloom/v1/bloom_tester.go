@@ -189,6 +189,7 @@ func (sm stringMatcherTest) MatchesWithPrefixBuf(bloom filter.Checker, buf []byt
 		//
 		// TODO(rfratto): The negative test here is a bit confusing, and the key
 		// presence test should likely be done higher up within FuseQuerier.
+
 		return false
 	}
 
