@@ -168,7 +168,7 @@ func (sm stringMatcherTest) Matches(bloom filter.Checker) bool {
 		//
 		// TODO(rfratto): The negative test here is a bit confusing, and the key
 		// presence test should likely be done higher up within FuseQuerier.
-		return true
+		return false
 	}
 
 	return bloom.Test(rawCombined)
@@ -189,7 +189,7 @@ func (sm stringMatcherTest) MatchesWithPrefixBuf(bloom filter.Checker, buf []byt
 		//
 		// TODO(rfratto): The negative test here is a bit confusing, and the key
 		// presence test should likely be done higher up within FuseQuerier.
-		return true
+		return false
 	}
 
 	return bloom.Test(prefixedCombined)
